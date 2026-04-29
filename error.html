@@ -2,51 +2,137 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>SYSTEM_FAILURE_0x0042</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SECURE_GATEWAY | 403 Forbidden</title>
     <style>
-        body { 
-            background-color: #0d0d0d; 
-            color: #00ff41; 
-            font-family: 'Courier New', Courier, monospace; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            height: 100vh; 
-            margin: 0; 
+        /* إعدادات الخطوط والخلفية الأساسية */
+        body {
+            background-color: #070707;
+            color: #d4d4d4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-image: radial-gradient(circle at 50% 0%, #1a1a1a 0%, #070707 60%);
+        }
+
+        /* حاوية الرسالة (النافذة) */
+        .system-card {
+            background-color: #121212;
+            border: 1px solid #2a2a2a;
+            border-top: 3px solid #d32f2f; /* خط أحمر علوي يعطي طابع الخطأ الأمني */
+            border-radius: 6px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+            max-width: 450px;
+            width: 90%;
             text-align: center;
+            position: relative;
         }
-        .container { 
-            border: 1px solid #00ff41; 
-            padding: 30px; 
-            box-shadow: 0 0 15px #00ff41;
-            max-width: 500px;
+
+        /* الأيقونة والنصوص */
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #d32f2f;
         }
-        h1 { font-size: 1.5em; margin-bottom: 20px; text-transform: uppercase; }
-        p { color: #aaaaaa; line-height: 1.6; }
-        .warning { color: #ff3131; font-weight: bold; margin-top: 20px; }
-        .btn { 
-            display: inline-block; 
-            margin-top: 25px; 
-            padding: 10px 20px; 
-            border: 1px solid #00ff41; 
-            color: #00ff41; 
-            text-decoration: none; 
-            transition: all 0.3s;
+
+        h1 {
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin: 0 0 10px 0;
+            letter-spacing: 1px;
+            font-weight: 600;
         }
-        .btn:hover { 
-            background-color: #00ff41; 
-            color: #0d0d0d; 
+
+        .error-code {
+            font-family: 'Courier New', Courier, monospace;
+            color: #888;
+            font-size: 0.85rem;
+            margin-bottom: 25px;
+            background: #000;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            border: 1px solid #222;
+        }
+
+        p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #a0a0a0;
+            margin-bottom: 20px;
+        }
+
+        /* مربع التنبيه الخاص */
+        .alert-box {
+            background-color: rgba(211, 47, 47, 0.05);
+            border: 1px dashed #d32f2f;
+            padding: 15px;
+            border-radius: 4px;
+            color: #ff5252;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin: 25px 0;
+        }
+
+        /* زر التواصل */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px 0;
+            background-color: transparent;
+            color: #ffffff;
+            text-decoration: none;
+            border: 1px solid #444;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .btn:hover {
+            background-color: #d32f2f;
+            border-color: #d32f2f;
+            box-shadow: 0 0 15px rgba(211, 47, 47, 0.4);
+        }
+
+        /* معلومات تقنية وهمية في الأسفل لزيادة المصداقية */
+        .tech-details {
+            margin-top: 30px;
+            border-top: 1px solid #222;
+            padding-top: 15px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.75rem;
+            color: #555;
+            text-align: left;
+            direction: ltr;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>[ SYSTEM ERROR : ACCESS_DENIED ]</h1>
-        <p>فشل بروتوكول المصادقة في جلب البيانات المطلوبة. الخادم لا يستجيب للطلبات الخارجية حالياً.</p>
+
+    <div class="system-card">
+        <div class="icon">⚠️</div>
+        <h1>انقطاع في الاتصال المشفر</h1>
+        <div class="error-code">ERR_SECURE_CONNECTION_DROPPED</div>
         
-        <p class="warning">تنبيه! لا تشارك هذا البوت أو الموقع إلا مع المناصرين لضمان عدم حذفه.</p>
+        <p>لم يتمكن الخادم من توثيق الجلسة الحالية. تم إغلاق المنفذ لأسباب أمنية ولحماية البيانات من التتبع.</p>
         
-        <a href="https://t.me/YOUR_BOT_USERNAME" class="btn">تواصل مع إدارة البوت</a>
+        <div class="alert-box">
+            تنبيه! لا تشارك هذا البوت أو الموقع إلا مع المناصرين لضمان عدم حذفه أو اختراقه.
+        </div>
+        
+        <a href="https://t.me/اسم_بوتك_هنا" class="btn">تواصل مع إدارة البوت</a>
+
+        <div class="tech-details">
+            Session ID: 8f9b-42cc-a129<br>
+            Timestamp: <script>document.write(new Date().toUTCString());</script><br>
+            Node: Gateway-Jordan-01
+        </div>
     </div>
+
 </body>
 </html>
